@@ -3,9 +3,10 @@ const { User, Thought } = require('../models');
 module.exports = {
   // Get all Users
   getUser(req, res) {
-    User.find()
+    User.find({})
       .then((user) => res.json(user))
-      .catch((err) => res.status(500).json(err));   
+      .catch((err) => 
+        res.status(500).json(err));  
   },
   // Get a single User
   getSingleUser(req, res) {
@@ -67,14 +68,12 @@ module.exports = {
   addFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $addToSet: { friends: req.params.friendsId} },
+      { $addToSet: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>
         !user
-          ? res
-              .status(404)
-              .json({ message: 'No User found with that ID :(' })
+          ? res.status(404).json({ message: 'No User found with that ID :(' })
           : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
