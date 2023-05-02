@@ -6,6 +6,9 @@ This is an API for a social network web application where users can share their 
 
 Link to demo video: https://watch.screencastify.com/v/hCDt2MxPj13VSRPehZoh
 
+## Aplication Preview
+The following animation shows the database on mongodb.
+![E-Commerce-Back-End](./assets/mongodb-sn.gif)
 
 ## Table of Contents
   - [Application Preview](#application-preview)
