@@ -4,6 +4,8 @@
 # Description
 This is an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. It uses `Express.js` for routing, a `MongoDB` database, the `Mongoose ODM` and `Moment.js` to format timestamps. `Insomnia` was used to create data.
 
+Link to demo video: https://watch.screencastify.com/v/hCDt2MxPj13VSRPehZoh
+
 
 ## Table of Contents
   - [Application Preview](#application-preview)
